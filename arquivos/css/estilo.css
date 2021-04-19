@@ -1,0 +1,290 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: rgba(100,100,0,0);
+	overflow: overlay;
+
+}
+::selection {
+	color: red;
+	background: #FFFF00;
+}
+.container {
+	max-width: 100%;
+	/*padding: 20px 0;*/
+	background-color: rgba(255,200,0,0);	
+}
+
+
+.colecao__imagens {
+	display: grid;
+	padding: 10px;
+	grid-template-columns: auto auto auto;
+	grid-column-gap: 10px;
+	grid-row-gap: 10px; 
+	position: relative;
+	max-width: 80%;
+	text-align: center;
+	left: 25%;
+
+}
+
+
+.colecao__imagens > div > img  {
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	transition: all 2s ease-in-out;
+	/*filter: brightness(100%);*/
+	
+}
+
+
+.colecao__imagens__itens > img {
+	position: relative;
+	filter: grayscale(100%);
+}
+
+.colecao__imagens__itens:nth-of-type(1) {
+	/*grid-area: 2 / 2;*/
+	grid-column: span 2;
+	grid-row: span 2;
+}
+
+
+.colecao__imagens__itens > img:hover {
+	/*opacity: 0.2;*/
+	/*transform: scale(0.9);*/
+	filter: grayscale(0%);
+
+}
+
+
+.full_baner {
+	padding: 20px;
+	/*max-height: 300px;*/
+	
+}	
+
+.full_baner--img > img{
+	
+	width: 100%;
+	height: 300px;
+	
+	object-fit: contain;
+	
+	position: relative;
+	text-align: center;
+	left: 25%;
+
+	transition: all 2s ease-in-out;
+}
+
+.full_baner--img > img:hover {
+	height: 400px;
+	z-index: 9999;
+}
+
+.overlay {
+	position: absolute;
+	bottom: 100%;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+}
+
+/*.colecao__imagens__itens:hover .overlay {
+	bottom: 0;
+  	height: 100%;
+}
+
+
+
+.overlay__text {
+	white-space: nowrap;
+	color: #fff;
+	font-size: 20px;
+	position: absolute;
+	overflow: auto;
+	bottom: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}*/
+
+.colecao_space {
+	padding: 10px 0;
+}
+
+.portifolio {
+	/*background-color: #f00;*/
+	display: grid;
+	padding: 10px;
+	grid-template-columns:  auto auto auto auto; 
+	grid-column-gap: 40px;
+	grid-row-gap: 40px;
+	position: relative;
+	text-align: center;
+	width: 80%;
+	left: 12%;
+}
+
+.portifolio > div > img  {
+	text-align: center;
+	max-width: 200px;
+	height: 300px;
+	object-fit: scale-down;
+}
+
+.portifolio__itens {
+	/*background-color: #f00;*/
+	position: relative;
+	border: 2px solid rgb(211,211,211);
+	padding: 40px;
+	opacity: 1;
+}
+
+.portifolio__itens > img{
+	position: relative;
+	border-radius: 0px; 
+}
+
+
+.portifolio__animation {
+	/*background-color: #f00;*/
+	position: absolute;
+	bottom: 100%;	
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	transition: .4s ease;
+}
+
+.portifolio__animation__opcoes {
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+.portifolio__animation__opcoes > button {
+	width: 100%;
+	padding: 14px 0;
+	margin-bottom: 2px;
+	border-radius: 8px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.portifolio__animation__opcoes > button:nth-of-type(1){
+	background-color: #0062cc;
+	border-color: #0062cc;
+	color: #fff;
+}
+
+.portifolio__animation__opcoes > button:nth-of-type(2){
+	background-color: #218838;
+	border-color: #218838;
+	color: #fff;
+}
+
+.portifolio__animation__opcoes > button:nth-of-type(1):hover {
+	transform: scale(0.9);
+}
+
+.portifolio__animation__opcoes > button:nth-of-type(2):hover {
+	transform: scale(0.9);
+}
+
+
+.portifolio__itens:hover .portifolio__animation {
+	bottom: 0;
+	height: 100%;
+}
+
+.portifolio__itens:hover {
+	opacity: 0.8;
+}
+
+.portifolio__itens__box__mg {
+	position: relative;
+}
+
+.portifolio__itens__box__mg__title {
+	/*background-color: #f00;*/
+	padding: 20px 0; 
+	font-family: roboto;
+	font-weight: bold;
+	font-size: 20px;
+	color: gray;
+}
+
+.portifolio__itens__box__mg__description {
+	text-align: center;
+	position: relative;
+	color: rgb(28,28,28);
+}
+
+.portifolio__itens__box__mg__title::first-letter {
+	color: #f00;
+	font-size: 24px;
+}
+
+
+@media only screen and (min-width: 0px){
+	.colecao__imagens {
+		grid-template-columns: auto;
+		width: 60%;
+	}
+
+	.portifolio {
+		grid-template-columns: auto;
+	}
+
+	.full_baner--img > img{
+		width: 60%;
+	}
+
+}
+
+@media only screen and (min-width: 768px){
+	.colecao__imagens {
+		grid-template-columns: auto auto;
+		width: 60%;
+	}
+
+	.portifolio {
+		grid-template-columns: auto auto;
+	}
+
+	.full_baner--img > img{
+		width: 60%;
+	}
+
+}
+
+@media only screen and (min-width: 992px){
+	.colecao__imagens {
+		grid-template-columns: auto auto auto;
+		width: 60%;
+	}
+
+	.portifolio {
+		grid-template-columns: auto auto auto auto;
+	}
+
+	.full_baner--img > img{
+		width: 60%;
+	}
+
+}
+

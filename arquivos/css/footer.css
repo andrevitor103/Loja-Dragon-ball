@@ -1,0 +1,114 @@
+
+.footer__dark {
+
+	background-color: rgb(255,200,100);
+	max-width: 100%;
+	max-height: 100%;
+
+	padding-bottom: 180px;
+
+	position: relative;
+	/*overflow: auto;*/
+	border-top: 4px solid #000;
+	border-bottom: 4px solid #000;
+
+
+}
+
+.footer__dark__bottom {
+	padding: 60px;
+
+	background-color: rgb(40,40,40);
+
+	background-image: url("../img/esfera.png");
+	background-repeat: 	repeat-x;
+
+}
+
+.footer__info {
+
+	position: absolute;
+
+	width: 50%;
+	height: 60%;
+
+	left: 50%;
+	bottom: 20%;
+
+	transform: translate(-50%, -50%);
+}
+
+.footer__contato {
+	
+	position: relative;
+	text-align: center;
+
+	width: 100%;
+	height: 60%;
+	overflow: hidden;
+
+	padding: 40px;
+	padding-bottom: 100px;
+	margin: 0;
+
+	/*columns: 2;*/
+
+}
+
+.footer__contato__itens:nth-of-type(3)::before {
+	content: '😀';
+}
+
+
+.footer__social {
+	/*background: #FFFFE0;*/
+
+	position: absolute;
+
+	width: 100%;
+	
+	top: 80%;
+	left: 100%;
+
+	transform: translate(-100%, 80%);
+
+}
+
+.footer__social__itens {
+	/*background-color: #FFA500;*/
+
+	position: relative;
+	text-align: center;
+
+	float: left;
+	width: 25%;
+	transition: all 2s ease-in-out;
+
+}
+
+.footer__social__itens a {
+	font-size: 16px;
+	margin: 4px;
+	text-decoration: none;
+	color: rgb(46,46,46);
+	font-weight: bold;
+}
+
+
+.footer__social__itens a > img {
+	width: 40px;
+	object-fit: cover;
+}
+
+
+.footer__social__itens a > p {
+	display: inline;
+}
+
+.footer__social__itens a > p::before {
+	content: '/';
+	font-size: 22px;
+}
+
+
+
